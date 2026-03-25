@@ -57,12 +57,12 @@ nav.scrolled {
 .nav-links { display: flex; gap: var(--space-md); align-items: center; }
 .nav-links a { font-size: 14px; color: rgba(240,237,232,0.65); text-decoration: none; transition: color 0.2s; }
 .nav-links a:hover { color: var(--color-text-soft); }
-.nav-cta {
+.nav-cta, .nav-links a.nav-cta {
   background: var(--color-amber); color: #fff; border: none;
   padding: 8px 18px; border-radius: 20px; font-size: 14px; font-weight: 500;
   cursor: pointer; text-decoration: none; transition: background 0.2s;
 }
-.nav-cta:hover { background: var(--color-amber-hover); }
+.nav-cta:hover, .nav-links a.nav-cta:hover { background: var(--color-amber-hover); color: #fff; }
 .nav-back { font-size: 14px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s; }
 .nav-back:hover { color: var(--color-text-soft); }
 
