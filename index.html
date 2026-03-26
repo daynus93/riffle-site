@@ -499,7 +499,7 @@
   if (window.matchMedia('(hover: none)').matches) {
     const featureCards = document.querySelectorAll('.feature-card');
     window.addEventListener('scroll', () => {
-      const zoneTop = window.innerHeight * 0.60;
+      const zoneTop = window.innerHeight * 0.50;
       const zoneBottom = window.innerHeight * 0.75;
       featureCards.forEach(card => {
         const rect = card.getBoundingClientRect();
