@@ -498,11 +498,12 @@
   // Scroll-hover on feature cards — touch devices only (desktop has real :hover)
   if (window.matchMedia('(hover: none)').matches) {
     const featureCards = document.querySelectorAll('.feature-card');
-    const mid = window.innerHeight / 2;
     window.addEventListener('scroll', () => {
+      const zoneTop = window.innerHeight * 0.25;
+      const zoneBottom = window.innerHeight * 0.75;
       featureCards.forEach(card => {
         const rect = card.getBoundingClientRect();
-        card.classList.toggle('card-active', rect.top < mid && rect.bottom > mid);
+        card.classList.toggle('card-active', rect.top < zoneBottom && rect.bottom > zoneTop);
       });
     }, { passive: true });
   }
