@@ -197,7 +197,7 @@
     <a href="#how" class="btn-secondary">See how it works</a>
   </div>
 
-  <div class="app-mockup">
+  <div class="app-mockup mockup-block-anim">
     <div class="mockup-header mockup-seq">
       <div class="mockup-title">Today's trip</div>
       <div class="mockup-badge">Active</div>
@@ -428,7 +428,12 @@
     });
 
     const STAGGER = 180;
-    const BASE = 100;
+    const BASE = 700;
+
+    // Slide the whole mockup block up first
+    setTimeout(() => {
+      document.querySelector('.mockup-block-anim').classList.add('visible');
+    }, BASE - 150);
 
     // 1. Header fades in
     // 2. Stats row fades in + counter starts
