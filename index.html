@@ -497,12 +497,14 @@
 
   // Scroll-hover on feature cards — touch devices only (desktop has real :hover)
   if (window.matchMedia('(hover: none)').matches) {
-    const scrollHoverObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        e.target.classList.toggle('card-active', e.isIntersecting);
+    const featureCards = document.querySelectorAll('.feature-card');
+    const mid = window.innerHeight / 2;
+    window.addEventListener('scroll', () => {
+      featureCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        card.classList.toggle('card-active', rect.top < mid && rect.bottom > mid);
       });
-    }, { threshold: 0, rootMargin: '-30% 0px -30% 0px' });
-    document.querySelectorAll('.feature-card').forEach(el => scrollHoverObserver.observe(el));
+    }, { passive: true });
   }
 
   // Section headings — stagger label → heading → sub within each section
