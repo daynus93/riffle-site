@@ -496,17 +496,6 @@
   revealEls.forEach(el => revealObserver.observe(el));
 
   // Scroll-hover on feature cards — touch devices only (desktop has real :hover)
-  if (window.matchMedia('(hover: none)').matches) {
-    const featureCards = document.querySelectorAll('.feature-card');
-    window.addEventListener('scroll', () => {
-      const zoneTop = window.innerHeight * 0.50;
-      const zoneBottom = window.innerHeight * 0.75;
-      featureCards.forEach(card => {
-        const rect = card.getBoundingClientRect();
-        card.classList.toggle('card-active', rect.top < zoneBottom && rect.bottom > zoneTop);
-      });
-    }, { passive: true });
-  }
 
   // Section headings — stagger label → heading → sub within each section
   document.querySelectorAll('.section-label, .section-heading, .section-sub').forEach(el => {

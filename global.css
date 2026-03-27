@@ -154,23 +154,6 @@ footer {
     color: #fff;
   }
 }
-.feature-card.card-active {
-  transform: translateY(-3px);
-  background: #0e2820;
-  box-shadow: 0 12px 32px rgba(0,0,0,0.4);
-}
-.feature-card.card-active::before {
-  left: 0;
-  right: 0;
-}
-.feature-card.card-active .feature-icon {
-  background: rgba(30,140,122,0.32);
-  box-shadow: 0 0 18px rgba(30,140,122,0.3);
-  transform: scale(1.12);
-}
-.feature-card.card-active .feature-title {
-  color: #fff;
-}
 
 /* Scroll reveals */
 .reveal {
